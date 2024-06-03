@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root {
+    --primary-yellow: hsl(47, 88%, 63%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey: hsl(0, 0%, 50%);
+    --neutral-black: hsl(0, 0%, 7%);
+
+    /* 字体类型变量 */
+    --font-family-primary: 'Figtree', sans-serif;
+
+    /* 字重变量 */
+    --font-weight-normal: 500;
+    --font-weight-extra-bold: 800;
+
+    /* 字体大小变量 */
+    --font-body-s: 14px;
+    --font-body-m: 16px;
+    --font-heading: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-s-bold {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-extra-bold);
+    font-size: var(--font-body-s);
+}
+
+.body-s-m {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-body-s);
+}
+
+.body-m {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-body-m);
+    color: var(--neutral-grey);
+}
+
+.heading {
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-extra-bold);
+    font-size: var(--font-heading);
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    font-size: 14px;
+    background-color: var(--primary-yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+
+.blog-preview-card {
+    transition: all 0.3s ease;
+    background-color: var(--neutral-white);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog-preview-card > img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+p {
+    margin-bottom: 20px; /* 设置每个 <p> 标签底部的外边距为20px */
+
+}
+
+p:last-child {
+    margin-bottom: 0; /* 移除最后一个 <p> 标签的底部外边距 */
+}
+
+.tag {
+    align-self: flex-start; /* 确保在容器中对齐方式 */
+    border-radius: 4px;
+    padding: 4px 12px 4px 12px;
+    background-color: var(--primary-yellow);
+    display: inline-block
+}
+
+/* 鼠标悬浮在 .blog-preview-card 上时，改变 .blog-preview-card 的样式 */
+.blog-preview-card:hover {
+    box-shadow: 16px 16px 0 0 rgba(0, 0, 0, 1);
+}
+
+/* 鼠标悬浮在 .heading 上时，改变 .heading 的样式 */
+.blog-preview-card .heading:hover {
+    color: var(--primary-yellow);
+}
+
+.author > img {
+    width: 32px;
+    height: 32px;
+    max-width: 100%;
+    border-radius: 16px;
+    margin-right: 12px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 432px) {
+    .blog-preview-card {
+        width: 384px;
+    }
+}
