@@ -95,7 +95,7 @@ body {
 
 p {
     margin-bottom: 20px; /* 设置每个 <p> 标签底部的外边距为20px */
-
+    line-height: 150%; /* 设置行高为150% */
 }
 
 p:last-child {
